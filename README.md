@@ -27,3 +27,14 @@ Select the workouts you want to share and press the share button in the navigati
 
 Just open any *.wotrfi* file (it stands for WOrkout TRansferer FIle) with the app. You then will see a list of the workouts stored in the file you opened.
 Select the workouts you want to import and click the import button in the navigation bar.
+
+
+## Screenshots
+
+Here is the main view:
+
+<img src="/img/01.png" width="400" alt="main view">
+
+The list view to select workouts from
+
+<img src="/img/02.png" width="400" alt="list view">
