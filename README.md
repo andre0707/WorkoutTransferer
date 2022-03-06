@@ -6,9 +6,9 @@ A simple SwiftUI based app to read workouts from a device, export them to a file
 ## Use case
 
 There are different use cases. For example:
-- when developting an app which works with workout data, it is nice to have an easy way copy some real data to the simulator
-- a friend has no Apple Watch, but would like the recorded data from a hike
-- on a very long hike, you can split up recording and share each part later with everybody from the group 
+- when developing an app which works with workout data, it is nice to have an easy way copy some real data to the simulator
+- a friend has no Apple Watch, but would like the recorded data from a hike to store it in his/her Health app
+- on a very, very long hike, you can split up recording and share each part later with everybody from the group
 
 
 ## How does it work?
