@@ -1,0 +1,48 @@
+/* 
+  Localizable.strings
+  Workout Transferer
+
+  Created by Andre Albach on 03.04.22.
+  
+*/
+
+
+// MARK: - Workout Activity
+
+"Walking" = "Walking";
+"Running" = "Running";
+"Hiking" = "Hiking";
+"Cycling" = "Cycling";
+"Swimming" = "Swimming";
+"Wheelchair Walk Pace" = "Wheelchair Walk Pace";
+"Wheelchair Run Pace" = "Wheelchair Run Pace";
+"Unknown" = "Unknown";
+
+
+// MARK: - App
+
+"Welcome to *Workout Transferer*" = "Welcome to *Workout Transferer*";
+"Welcome decription" = "With this app you can transfer workouts with routes saved in Health from one device to another. Both devices need this app installed.\nThis is helpful if not everybody on for example a hike can record the workout with an own device, but would like to have the route saved as well.";
+"Access needed text" = "*Workout Transferer* will need acces to your health data to read workouts. If you want to store transferred workouts, writing access is also needed.";
+"Provide health access" = "Provide health access";
+"Start date" = "Start date";
+"End date" = "End date";
+"Date Filter" = "Date Filter";
+"Date Filter Footer" = "Only workouts during these days will be read";
+"Include calories" = "Include calories";
+"Export Options" = "Export Options";
+"Export Options Footer" = "These options will be applied when exporting/sharing workouts";
+"Read workouts" = "Read workouts";
+"Export" = "Export";
+"Export Footer" = "This will read all the workouts matching the set filter. You will then see a list of all the matching workouts to select the ones you want to export.";
+"Import Text" = "Just open any *.wotrfi* file with this app the start the import process.";
+"Import" = "Import";
+"Workout Filter" = "Workout Filter";
+"Reading workouts" = "Reading workouts";
+"No matching workouts" = "No matching workouts";
+"Select the workouts you want to export" = "Select the workouts you want to export (Checkmark indicates selected)";
+"Matching Workouts" = "Matching Workouts";
+"Select the workouts you want to import" = "Select the workouts you want to import (Checkmark indicates selected)";
+"Importing workouts..." = "Importing workouts...";
+"Importing workouts" = "Importing workouts";
+"Cancel" = "Cancel";

@@ -32,7 +32,7 @@ struct WorkoutFilterView: View {
                 Text("Date Filter")
                     .font(.headline)
             }, footer: {
-                Text("Only workouts during these days will be read")
+                Text("Date Filter Footer")
             })
             
             Section(content: {
@@ -41,7 +41,7 @@ struct WorkoutFilterView: View {
                 Text("Export Options")
                     .font(.headline)
             }, footer: {
-                Text("These options will be applied when exporting/sharing workouts")
+                Text("Export Options Footer")
             })
             
             Section(content: {
@@ -52,11 +52,11 @@ struct WorkoutFilterView: View {
                 Text("Export")
                     .font(.headline)
             }, footer: {
-                Text("This will read all the workouts matching the set filter. You will then see a list of all the matching workouts to select the ones you want to export.")
+                Text("Export Footer")
             })
             
             Section(content: {
-                Text("Just open any *.wotrfi* file with this app the start the import process.")
+                Text("Import Text")
                     .fixedSize(horizontal: false, vertical: true)
             }, header: {
                 Text("Import")

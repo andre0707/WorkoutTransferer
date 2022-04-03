@@ -16,14 +16,14 @@ extension HKWorkoutActivityType: Identifiable {
 extension HKWorkoutActivityType: CustomStringConvertible {
     public var description: String {
         switch self {
-        case .walking: return "Walking"
-        case .running: return "Running"
-        case .hiking: return "Hiking"
-        case .cycling: return "Cycling"
-        case .swimming: return "Swimming"
-        case .wheelchairWalkPace: return "Wheelchair Walk Pace"
-        case .wheelchairRunPace: return "Wheelchair Run Pace"
-        default: return "Unknown"
+        case .walking: return NSLocalizedString("Walking", comment: "")
+        case .running: return NSLocalizedString("Running", comment: "")
+        case .hiking: return NSLocalizedString("Hiking", comment: "")
+        case .cycling: return NSLocalizedString("Cycling", comment: "")
+        case .swimming: return NSLocalizedString("Swimming", comment: "")
+        case .wheelchairWalkPace: return NSLocalizedString("Wheelchair Walk Pace", comment: "")
+        case .wheelchairRunPace: return NSLocalizedString("Wheelchair Run Pace", comment: "")
+        default: return NSLocalizedString("Unknown", comment: "")
         }
     }
 }

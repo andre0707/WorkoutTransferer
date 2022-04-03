@@ -23,10 +23,10 @@ struct WelcomeView: View {
                     .padding()
                     .multilineTextAlignment(.center)
                 
-                Text("With this app you can transfer workouts with routes saved in Health from one device to another. Both devices need this app installed.\nThis is helpful if not everybody on for example a hike can record the workout with an own device, but would like to have the route saved as well.")
+                Text("Welcome decription")
                     .padding()
                 
-                Text("*Workout Transferer* will need acces to your health data to read workouts. If you want to store transferred workouts, writing access is also needed.")
+                Text("Access needed text")
                     .padding()
                 
                 
