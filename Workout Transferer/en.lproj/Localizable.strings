@@ -35,7 +35,7 @@
 "Read workouts" = "Read workouts";
 "Export" = "Export";
 "Export Footer" = "This will read all the workouts matching the set filter. You will then see a list of all the matching workouts to select the ones you want to export.";
-"Import Text" = "Just open any *.wotrfi* file with this app the start the import process.";
+"Import Text" = "Just open any *.wotrfi* file with this app to start the import process.";
 "Import" = "Import";
 "Workout Filter" = "Workout Filter";
 "Reading workouts" = "Reading workouts";
