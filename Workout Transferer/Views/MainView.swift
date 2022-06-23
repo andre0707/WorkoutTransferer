@@ -29,6 +29,15 @@ struct MainView: View {
                 
             case .displayFilter:
                 WorkoutFilterView()
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing, content: {
+                            Link(destination:
+                                    URL(string: "http://aaindustries-apps.de/WorkoutTransferer/app_about_eng.html")!,
+                                 label: {
+                                Image(systemName: "info.circle")
+                            })
+                        })
+                    }
                 
             case .displayImport:
                 ImportWorkoutsView()
@@ -43,5 +52,6 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .environmentObject(WorkoutManager.preview)
     }
 }
