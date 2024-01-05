@@ -161,7 +161,6 @@ final class WorkoutManager: ObservableObject {
     func exportSelectedWorkoutRoutes() {
         let tracks = workouts
             .filter { $0.isSelected && $0.hasRoute }
-//            .compactMap { ($0.data.startDate, $0.gpxTrackString) }
         
         do {
             let fileManager = FileManager.default
@@ -173,6 +172,7 @@ final class WorkoutManager: ObservableObject {
             }
             try fileManager.createDirectory(at: url, withIntermediateDirectories: true)
             
+            /// Create .gpx files for all routes
             for track in tracks {
                 guard let trackGpxString = track.gpxTrackString else { continue }
                 let fileUrl = url.appendingPathComponent("route_\(DateFormatter.fileName.string(from: track.data.startDate)).gpx")
@@ -200,6 +200,8 @@ final class WorkoutManager: ObservableObject {
                 }
             }
             guard !hasCopyError else { return }
+            
+            /// Show share sheet
             let activityVC = UIActivityViewController(activityItems: [destURL], applicationActivities: nil)
             UIApplication.shared.keyWindow?.rootViewController?.present(activityVC, animated: true, completion: nil)
         } catch {
