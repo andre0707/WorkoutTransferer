@@ -1,0 +1,426 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Access needed text" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "*Workout Transferer* benötigt Zugriff auf deine Health Daten, damit Workouts gelesen werden können. Damit Workouts importiert werden können, muss auch eine Schreibzugriff erteilt werden."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "*Workout Transferer* will need acces to your health data to read workouts. If you want to store transferred workouts, writing access is also needed."
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        }
+      }
+    },
+    "Cycling" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrrad fahren"
+          }
+        }
+      }
+    },
+    "Date Filter" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datumsfilter"
+          }
+        }
+      }
+    },
+    "Date Filter Footer" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nur Workouts in diesem Datumsbereich werden von Health gelesen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Only workouts during these days will be read"
+          }
+        }
+      }
+    },
+    "End date" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enddatum"
+          }
+        }
+      }
+    },
+    "Export" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Export"
+          }
+        }
+      }
+    },
+    "Export Footer" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese Aktion liest alle Workouts, die dem Filter entsprechen. Es wird eine Liste mit den passenden Workouts angezeigt, aus der diejenigen ausgewählt werden können, die exportiert werden sollen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This will read all the workouts matching the set filter. You will then see a list of all the matching workouts to select the ones you want to export."
+          }
+        }
+      }
+    },
+    "Export Options" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exportoptionen"
+          }
+        }
+      }
+    },
+    "Export Options Footer" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese Optionen werden bei dem Export/Teilen von Workouts ausgewertet."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "These options will be applied when exporting/sharing workouts"
+          }
+        }
+      }
+    },
+    "Hiking" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wandern"
+          }
+        }
+      }
+    },
+    "Import" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Import"
+          }
+        }
+      }
+    },
+    "Import Text" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öffne eine *.wotrfi* Datei mit dieser App und starte den Importprozess."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Just open any *.wotrfi* file with this app to start the import process."
+          }
+        }
+      }
+    },
+    "Importing workouts" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importiere Workouts"
+          }
+        }
+      }
+    },
+    "Importing workouts..." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importiere Workouts..."
+          }
+        }
+      }
+    },
+    "Include calories" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalorien berücksichtigen"
+          }
+        }
+      }
+    },
+    "Matching Workouts" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passende Workouts"
+          }
+        }
+      }
+    },
+    "No matching workouts" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Workouts gefunden"
+          }
+        }
+      }
+    },
+    "Not selectable" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nicht auswählbar"
+          }
+        }
+      }
+    },
+    "Provide health access" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Health Zugriff gestatten"
+          }
+        }
+      }
+    },
+    "Read workouts" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lese Workouts"
+          }
+        }
+      }
+    },
+    "Reading workouts" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Workouts werden gelesen"
+          }
+        }
+      }
+    },
+    "Routes (.gpx)" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Routen (.gpx)"
+          }
+        }
+      }
+    },
+    "Running" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laufen"
+          }
+        }
+      }
+    },
+    "Select the workouts you want to export" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle die Workouts aus, die exportiert werden sollen (Haken entspricht ausgewählt)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select the workouts you want to export (Checkmark indicates selected)"
+          }
+        }
+      }
+    },
+    "Select the workouts you want to import" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle die Workouts aus, die importiert werden sollen (Haken entspricht ausgewählt)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select the workouts you want to import (Checkmark indicates selected)"
+          }
+        }
+      }
+    },
+    "Selectable" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auswählbar"
+          }
+        }
+      }
+    },
+    "Start date" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Startdatum"
+          }
+        }
+      }
+    },
+    "Swimming" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schwimmen"
+          }
+        }
+      }
+    },
+    "Unknown" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unbekannt"
+          }
+        }
+      }
+    },
+    "Walking" : {
+      "comment" : "MARK: - Workout Activity",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gehen"
+          }
+        }
+      }
+    },
+    "Welcome decription" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit dieser App können Workouts und ihre dazugehörigen Routen die in Health gespeichert sind ganz einfach von einem Gerät auf ein anderes Gerät übertragen werden. Beide Geräte müssten dabei diese App installiert haben.\nDie Übertragung von Workouts ist hilfreich, wenn z.B. nicht jeder bei einer Wanderung die Wanderung auch aufzeichnet, aber gerne alle die Trainingsdaten auf ihrem Gerät hätten."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "With this app you can transfer workouts with routes saved in Health from one device to another. Both devices need this app installed.\nThis is helpful if not everybody on for example a hike can record the workout with an own device, but would like to have the route saved as well."
+          }
+        }
+      }
+    },
+    "Welcome to *Workout Transferer*" : {
+      "comment" : "MARK: - App",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Willkommen bei *Workout Transferer*"
+          }
+        }
+      }
+    },
+    "Wheelchair Run Pace" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rollstuhl (Laufen)"
+          }
+        }
+      }
+    },
+    "Wheelchair Walk Pace" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rollstuhl (Gehen)"
+          }
+        }
+      }
+    },
+    "Workout Filter" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Workoutfilter"
+          }
+        }
+      }
+    },
+    "Workouts" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Workouts"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
