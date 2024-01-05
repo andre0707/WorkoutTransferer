@@ -62,12 +62,20 @@ struct WorkoutListView: View {
         
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button (action: {
-                    workoutManager.exportSelectedWorkouts()
+                Menu(content: {
+                    Button("Workouts", systemImage: "figure.run.square.stack", action: {
+                        workoutManager.exportSelectedWorkouts()
+                    })
+                    
+                    Divider()
+                    
+                    Button("Routes (.gpx)", systemImage: "point.bottomleft.forward.to.point.topright.scurvepath", action: {
+                        workoutManager.exportSelectedWorkoutRoutes()
+                    })
                 }, label: {
                     Image(systemName: "square.and.arrow.up")
                 })
-                    .disabled(workoutManager.workouts.isEmpty)
+                .disabled(workoutManager.workouts.isEmpty)
             }
         }
     }

@@ -14,6 +14,8 @@ struct SelectableWorkout: Codable {
     let data: HKWorkout
     /// The route belonging to the workout from `data`
     var route: [WorkoutRouteData]?
+    /// Indicator, if this workout has a route
+    var hasRoute: Bool { route != nil }
     
     /// Indicator, if this workout is currently selected in the lsit it is shown
     var isSelected: Bool = true
@@ -106,6 +108,41 @@ struct SelectableWorkout: Codable {
 
 extension SelectableWorkout: Identifiable {
     var id: UUID { data.id }
+}
+
+
+// MARK: - gpx track
+
+extension SelectableWorkout {
+    
+    /// Will create an gpx track string from `self`
+    var gpxTrackString: String? {
+        guard let route, !route.isEmpty else { return nil }
+        
+        let trackPoints = route.map {
+            String(format: "<trkpt lon=\"%.6f\" lat=\"%.6f\"><ele>%.6f</ele><time>%@</time></trkpt>",
+                   $0.longitude,
+                   $0.latitude,
+                   $0.altitude,
+                   DateFormatter.iso8601.string(from: $0.timeStamp)
+            )
+        }
+        
+        return """
+        <?xml version="1.0" encoding="UTF-8"?>
+        <gpx version="1.1" creator="Workout Transferer" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+          <metadata>
+            <time>\(DateFormatter.iso8601.string(from: data.startDate))</time>
+          </metadata>
+          <trk>
+            <name>\(data.workoutActivityType.description)</name>
+            <trkseg>
+            \(trackPoints.joined(separator: "\n    "))
+            </trkseg>
+          </trk>
+        </gpx>
+        """
+    }
 }
 
 

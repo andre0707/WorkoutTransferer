@@ -153,7 +153,57 @@ final class WorkoutManager: ObservableObject {
             let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
             UIApplication.shared.keyWindow?.rootViewController?.present(activityVC, animated: true, completion: nil)
         } catch {
-            print(error.localizedDescription)
+            logger.error("\(error.localizedDescription, privacy: .public)")
+        }
+    }
+    
+    /// This function will export the routes from all the selected workouts in a standard track .gpx file format
+    func exportSelectedWorkoutRoutes() {
+        let tracks = workouts
+            .filter { $0.isSelected && $0.hasRoute }
+//            .compactMap { ($0.data.startDate, $0.gpxTrackString) }
+        
+        do {
+            let fileManager = FileManager.default
+            let url = fileManager.temporaryDirectory.appendingPathComponent("WorkoutRoutes")
+            logger.debug("\(url, privacy: .public)")
+            
+            if fileManager.fileExists(atPath: url.path) {
+                try fileManager.removeItem(at: url)
+            }
+            try fileManager.createDirectory(at: url, withIntermediateDirectories: true)
+            
+            for track in tracks {
+                guard let trackGpxString = track.gpxTrackString else { continue }
+                let fileUrl = url.appendingPathComponent("route_\(DateFormatter.fileName.string(from: track.data.startDate)).gpx")
+                do {
+                    try trackGpxString.write(to: fileUrl, atomically: true, encoding: .utf8)
+                } catch {
+                    logger.error("\(error.localizedDescription)")
+                }
+            }
+            
+            /// Do zipping
+            var readError: NSError? = nil
+            var hasCopyError = false
+            let coordinator = NSFileCoordinator()
+            let destURL = fileManager.temporaryDirectory.appendingPathComponent("WorkoutRoutes.zip")
+            if fileManager.fileExists(atPath: destURL.path) {
+                try fileManager.removeItem(at: destURL)
+            }
+            
+            coordinator.coordinate(readingItemAt: url, options: .forUploading, error: &readError) { url in
+                do {
+                    try fileManager.copyItem(at: url, to: destURL)
+                } catch {
+                    hasCopyError = true
+                }
+            }
+            guard !hasCopyError else { return }
+            let activityVC = UIActivityViewController(activityItems: [destURL], applicationActivities: nil)
+            UIApplication.shared.keyWindow?.rootViewController?.present(activityVC, animated: true, completion: nil)
+        } catch {
+            logger.error("\(error.localizedDescription, privacy: .public)")
         }
     }
     

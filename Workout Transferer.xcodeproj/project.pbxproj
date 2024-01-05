@@ -26,6 +26,8 @@
 		654C26EC27D0EDAA004AAC93 /* WorkoutListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654C26EB27D0EDAA004AAC93 /* WorkoutListCellView.swift */; };
 		654C26EE27D0FEE4004AAC93 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654C26ED27D0FEE4004AAC93 /* UIApplication.swift */; };
 		6594C9ED27F9AA660054E8C9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6594C9EF27F9AA660054E8C9 /* Localizable.strings */; };
+		65AC2D302B483C8200087C7A /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AC2D2F2B483C8200087C7A /* Bundle.swift */; };
+		65AC2D322B4844CD00087C7A /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AC2D312B4844CD00087C7A /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		654C271C27D52BD9004AAC93 /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
 		6594C9EE27F9AA660054E8C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6594C9F027F9AA690054E8C9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		65AC2D2F2B483C8200087C7A /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		65AC2D312B4844CD00087C7A /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,11 +149,13 @@
 		6545DB7D27B65E2D000624BC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				65AC2D2F2B483C8200087C7A /* Bundle.swift */,
+				6545DB8B27B66BFF000624BC /* CLLocation.swift */,
+				65AC2D312B4844CD00087C7A /* DateFormatter.swift */,
 				6545DB7E27B65E39000624BC /* Date.swift */,
 				6545DB8227B65F6A000624BC /* HKWorkout.swift */,
-				654C26ED27D0FEE4004AAC93 /* UIApplication.swift */,
 				6545DB8427B65FC5000624BC /* HKWorkoutActivityType.swift */,
-				6545DB8B27B66BFF000624BC /* CLLocation.swift */,
+				654C26ED27D0FEE4004AAC93 /* UIApplication.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -245,11 +251,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6545DB6827B65B38000624BC /* WorkoutFilterView.swift in Sources */,
+				65AC2D302B483C8200087C7A /* Bundle.swift in Sources */,
 				654C26E827D0E819004AAC93 /* MainView.swift in Sources */,
 				6545DB8827B66192000624BC /* SelectableWorkout.swift in Sources */,
 				654C26EE27D0FEE4004AAC93 /* UIApplication.swift in Sources */,
 				6545DB6627B65B38000624BC /* Workout_TransfererApp.swift in Sources */,
 				6545DB8527B65FC5000624BC /* HKWorkoutActivityType.swift in Sources */,
+				65AC2D322B4844CD00087C7A /* DateFormatter.swift in Sources */,
 				6545DB8127B65F0B000624BC /* WorkoutListView.swift in Sources */,
 				6545DB8C27B66BFF000624BC /* CLLocation.swift in Sources */,
 				654C26E627D0E584004AAC93 /* WelcomeView.swift in Sources */,
@@ -400,7 +408,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Workout Transferer/Workout Transferer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Workout Transferer/Preview Content\"";
 				DEVELOPMENT_TEAM = 258C524YRU;
 				ENABLE_PREVIEWS = YES;
@@ -420,7 +428,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.aaindustries.Workout-Transferer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -436,7 +444,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Workout Transferer/Workout Transferer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Workout Transferer/Preview Content\"";
 				DEVELOPMENT_TEAM = 258C524YRU;
 				ENABLE_PREVIEWS = YES;
@@ -456,7 +464,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.aaindustries.Workout-Transferer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
