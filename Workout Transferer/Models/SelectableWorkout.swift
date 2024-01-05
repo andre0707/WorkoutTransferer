@@ -20,6 +20,9 @@ struct SelectableWorkout: Codable {
     /// Indicator, if this workout is currently selected in the lsit it is shown
     var isSelected: Bool = true
     
+    /// Helper variable to access the `workoutActivityType` from the underlaying `data`
+    var workoutActivityType: HKWorkoutActivityType { data.workoutActivityType }
+    
     
     /// Initialisation
     init(workout: HKWorkout, routeData: [WorkoutRouteData]? = nil) {

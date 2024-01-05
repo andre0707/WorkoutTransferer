@@ -28,6 +28,7 @@
 		65AC2D302B483C8200087C7A /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AC2D2F2B483C8200087C7A /* Bundle.swift */; };
 		65AC2D322B4844CD00087C7A /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AC2D312B4844CD00087C7A /* DateFormatter.swift */; };
 		65AC2D342B48522700087C7A /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 65AC2D332B48522700087C7A /* Localizable.xcstrings */; };
+		65AC2D362B48735C00087C7A /* MultiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AC2D352B48735C00087C7A /* MultiPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		65AC2D2F2B483C8200087C7A /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		65AC2D312B4844CD00087C7A /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		65AC2D332B48522700087C7A /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		65AC2D352B48735C00087C7A /* MultiPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				654C26E727D0E819004AAC93 /* MainView.swift */,
+				65AC2D352B48735C00087C7A /* MultiPicker.swift */,
 				654C26E527D0E584004AAC93 /* WelcomeView.swift */,
 				6545DB6727B65B38000624BC /* WorkoutFilterView.swift */,
 				6545DB8027B65F0B000624BC /* WorkoutListView.swift */,
@@ -260,6 +263,7 @@
 				6545DB8127B65F0B000624BC /* WorkoutListView.swift in Sources */,
 				6545DB8C27B66BFF000624BC /* CLLocation.swift in Sources */,
 				654C26E627D0E584004AAC93 /* WelcomeView.swift in Sources */,
+				65AC2D362B48735C00087C7A /* MultiPicker.swift in Sources */,
 				654C26EA27D0ED43004AAC93 /* ImportWorkoutsView.swift in Sources */,
 				6545DB7A27B65D30000624BC /* WorkoutManager.swift in Sources */,
 				6545DB8327B65F6A000624BC /* HKWorkout.swift in Sources */,
@@ -326,7 +330,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -385,7 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -403,7 +407,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Workout Transferer/Workout Transferer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Workout Transferer/Preview Content\"";
 				DEVELOPMENT_TEAM = 258C524YRU;
 				ENABLE_PREVIEWS = YES;
@@ -439,7 +443,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Workout Transferer/Workout Transferer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Workout Transferer/Preview Content\"";
 				DEVELOPMENT_TEAM = 258C524YRU;
 				ENABLE_PREVIEWS = YES;

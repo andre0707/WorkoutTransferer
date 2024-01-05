@@ -24,6 +24,7 @@ extension HKWorkoutActivityType: CustomStringConvertible {
         case .swimming: return String(localized: "Swimming")
         case .wheelchairWalkPace: return String(localized: "Wheelchair Walk Pace")
         case .wheelchairRunPace: return String(localized: "Wheelchair Run Pace")
+        case .swimBikeRun: return String(localized: "Triathlon")
         default: return String(localized: "Unknown", comment: "")
         }
     }
@@ -38,3 +39,22 @@ extension HKWorkoutActivityType: Comparable {
 
 
 extension HKWorkoutActivityType: Codable { }
+
+
+extension HKWorkoutActivityType {
+    /// The icon symbol name from SF-Symbols
+    public var iconSymbolName: String {
+        switch self {
+        case .walking: return "figure.walk"
+        case .running: return "figure.run"
+        case .hiking: return "figure.hiking"
+        case .cycling: return "figure.outdoor.cycle"
+        case .swimming: return "figure.open.water.swim"
+        case .wheelchairWalkPace: return "figure.roll"
+        case .wheelchairRunPace: return "figure.roll.runningpace"
+        case .swimBikeRun: return "medal"
+        case .other: return "questionmark"
+        default: return "questionmark"
+        }
+    }
+}

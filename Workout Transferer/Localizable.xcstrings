@@ -17,6 +17,16 @@
         }
       }
     },
+    "Activity types" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trainingstypen"
+          }
+        }
+      }
+    },
     "Cancel" : {
       "localizations" : {
         "de" : {
@@ -33,16 +43,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fahrrad fahren"
-          }
-        }
-      }
-    },
-    "Date Filter" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Datumsfilter"
           }
         }
       }
@@ -125,6 +125,16 @@
         }
       }
     },
+    "Filter" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filter"
+          }
+        }
+      }
+    },
     "Hiking" : {
       "localizations" : {
         "de" : {
@@ -197,6 +207,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Passende Workouts"
+          }
+        }
+      }
+    },
+    "Multiselect" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mehrfachauswahl"
           }
         }
       }
@@ -313,6 +333,16 @@
         }
       }
     },
+    "Selection" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auswahl"
+          }
+        }
+      }
+    },
     "Start date" : {
       "localizations" : {
         "de" : {
@@ -329,6 +359,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Schwimmen"
+          }
+        }
+      }
+    },
+    "Triathlon" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Triathlon"
           }
         }
       }

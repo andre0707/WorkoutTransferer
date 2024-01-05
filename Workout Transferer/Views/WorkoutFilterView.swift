@@ -17,54 +17,69 @@ struct WorkoutFilterView: View {
     
     /// The body of the view
     var body: some View {
-        Form {
-            Section(content: {
-                DatePicker("Start date",
-                           selection: $workoutManager.startDate,
-                           in: Date.distantPast ... Date.now,
-                           displayedComponents: [.date])
-                
-                DatePicker("End date",
-                           selection: $workoutManager.endDate,
-                           in: Date.distantPast ... Date.now,
-                           displayedComponents: [.date])
-            }, header: {
-                Text("Date Filter")
-                    .font(.headline)
-            }, footer: {
-                Text("Date Filter Footer")
-            })
-            
-            Section(content: {
-                Toggle("Include calories", isOn: $workoutManager.includeCaloriesInExport)
-            }, header: {
-                Text("Export Options")
-                    .font(.headline)
-            }, footer: {
-                Text("Export Options Footer")
-            })
-            
-            Section(content: {
-                NavigationLink("Read workouts", isActive: $workoutManager.isWorkoutListVisible, destination: {
-                    WorkoutListView()
+        NavigationStack{
+            Form {
+                Section(content: {
+                    MultiPicker(label: {
+                        Text("Activity types")
+                    }, selectionLabel: { activityType in
+                        Label(activityType.description, systemImage: activityType.iconSymbolName)
+                    },
+                                availableOptions: workoutManager.availableWorkoutActivityTypes,
+                                selected: $workoutManager.selectedWorkoutActivityTypes,
+                                navigationTitle: Text("Activity types"))
+                    
+                    DatePicker("Start date",
+                               selection: $workoutManager.startDate,
+                               in: Date.distantPast ... Date.now,
+                               displayedComponents: [.date])
+                    
+                    DatePicker("End date",
+                               selection: $workoutManager.endDate,
+                               in: Date.distantPast ... Date.now,
+                               displayedComponents: [.date])
+                    
+                }, header: {
+                    Text("Filter")
+                        .font(.headline)
+                }, footer: {
+                    Text("Date Filter Footer")
                 })
-            }, header: {
-                Text("Export")
-                    .font(.headline)
-            }, footer: {
-                Text("Export Footer")
-            })
+                
+                Section(content: {
+                    Toggle("Include calories", isOn: $workoutManager.includeCaloriesInExport)
+                }, header: {
+                    Text("Export Options")
+                        .font(.headline)
+                }, footer: {
+                    Text("Export Options Footer")
+                })
+                
+                Section(content: {
+                    Button("Read workouts", action: { workoutManager.isWorkoutListVisible = true })
+                        
+                }, header: {
+                    Text("Export")
+                        .font(.headline)
+                }, footer: {
+                    Text("Export Footer")
+                })
+                
+                Section(content: {
+                    Text("Import Text")
+                        .fixedSize(horizontal: false, vertical: true)
+                }, header: {
+                    Text("Import")
+                        .font(.headline)
+                })
+            }
+            .navigationTitle("Workout Filter")
+            .navigationBarTitleDisplayMode(.inline)
             
-            Section(content: {
-                Text("Import Text")
-                    .fixedSize(horizontal: false, vertical: true)
-            }, header: {
-                Text("Import")
-                    .font(.headline)
+            .navigationDestination(isPresented: $workoutManager.isWorkoutListVisible, destination: {
+                WorkoutListView()
             })
         }
-        .navigationTitle("Workout Filter")
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

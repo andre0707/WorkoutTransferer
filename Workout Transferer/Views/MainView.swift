@@ -22,7 +22,7 @@ struct MainView: View {
     
     /// The body of the view
     var body: some View {
-        NavigationView {
+        NavigationStack {
             switch workoutManager.mainViewState {
             case .displayWelcome:
                 WelcomeView()

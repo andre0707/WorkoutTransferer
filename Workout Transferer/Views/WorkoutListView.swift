@@ -33,8 +33,10 @@ struct WorkoutListView: View {
                             
                             ForEach($workoutManager.workouts) { $workout in
                                 HStack {
+                                    Image(systemName: workout.workoutActivityType.iconSymbolName)
+                                    
                                     VStack(alignment: .leading) {
-                                        Text(verbatim: "\(workout.data.workoutActivityType.description) - \(workout.data.formattedDistance)")
+                                        Text(verbatim: "\(workout.workoutActivityType.description) - \(workout.data.formattedDistance)")
                                             .font(.headline)
                                         
                                         Text(verbatim: workout.data.formattedStartEnd)

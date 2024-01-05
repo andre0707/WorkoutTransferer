@@ -34,10 +34,24 @@ final class WorkoutManager: ObservableObject {
     
     // MARK: - Filter options
     
+    /// The workout actyvity types the user seleced. Only these types will be read
+    @Published var selectedWorkoutActivityTypes: Set<HKWorkoutActivityType>
     /// Only workouts after this date will be read
     @Published var startDate: Date = Calendar.current.date(byAdding: .day, value: -7, to: Date.startOfToday)!
     /// Only workouts before this date will be read
     @Published var endDate: Date = Date.endOfToday
+    
+    /// A list of all available workout activity types
+    let availableWorkoutActivityTypes: [HKWorkoutActivityType] = [
+        .walking,
+        .running,
+        .hiking,
+        .cycling,
+        .swimming,
+        .wheelchairWalkPace,
+        .wheelchairRunPace,
+        .swimBikeRun
+    ]
     
     /// Indicator, if calories count should be included when exporting workouts
     var includeCaloriesInExport: Bool = true
@@ -48,6 +62,8 @@ final class WorkoutManager: ObservableObject {
     
     /// Initialisation
     init() {
+        selectedWorkoutActivityTypes = Set(availableWorkoutActivityTypes)
+        
         $isWorkoutListVisible.sink { newValue in
             guard newValue else { return }
             Task { [weak self] in
@@ -327,10 +343,11 @@ final class WorkoutManager: ObservableObject {
             }))
         }
 
-        guard let workouts = samples as? [HKWorkout] else {
-            return nil
+        guard let workouts = samples as? [HKWorkout] else { return nil }
+        
+        if selectedWorkoutActivityTypes.count != availableWorkoutActivityTypes.count {
+            return workouts.filter { selectedWorkoutActivityTypes.contains($0.workoutActivityType) }
         }
-
         return workouts
     }
     
