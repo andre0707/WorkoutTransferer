@@ -8,7 +8,12 @@
 import Combine
 import CoreLocation
 import HealthKit
+import os
 import SwiftUI
+
+/// A logger to log errors
+fileprivate let logger = Logger(subsystem: Bundle.main.bundleIdentifier, category: "WorkoutManager")
+
 
 /// The main view model which will coordinate the app
 final class WorkoutManager: ObservableObject {
@@ -77,7 +82,7 @@ final class WorkoutManager: ObservableObject {
                     self.mainViewState = status != .unnecessary ? .displayWelcome : .displayFilter
                 }
             } catch {
-                print(error.localizedDescription)
+                logger.error("\(error.localizedDescription, privacy: .public)")
             }
         }
     }
@@ -117,7 +122,7 @@ final class WorkoutManager: ObservableObject {
             }
             
         } catch {
-            print(error.localizedDescription)
+            logger.error("\(error.localizedDescription, privacy: .public)")
         }
         
     }
@@ -136,7 +141,7 @@ final class WorkoutManager: ObservableObject {
             let jsonData = try JSONEncoder().encode(selectedWorkouts)
             
             let url = FileManager.default.temporaryDirectory.appendingPathComponent("ExportedWorkouts.wotrfi")
-            print(url)
+            logger.debug("\(url, privacy: .public)")
             
             if FileManager.default.fileExists(atPath: url.path) {
                 try FileManager.default.removeItem(at: url)
@@ -144,7 +149,7 @@ final class WorkoutManager: ObservableObject {
             
             try jsonData.write(to: url)
             
-            print(url)
+            logger.debug("\(url, privacy: .public)")
             let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
             UIApplication.shared.keyWindow?.rootViewController?.present(activityVC, animated: true, completion: nil)
         } catch {
@@ -199,7 +204,7 @@ final class WorkoutManager: ObservableObject {
                 do {
                     try await workout.saveToHealthStore()
                 } catch {
-                    print(error.localizedDescription)
+                    logger.error("\(error.localizedDescription, privacy: .public)")
                 }
             }
             DispatchQueue.main.async {

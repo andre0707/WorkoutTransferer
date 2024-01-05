@@ -21,7 +21,7 @@
 
 // MARK: - App
 
-"Welcome to *Workout Transferer*" = "Willkoemmen bei *Workout Transferer*";
+"Welcome to *Workout Transferer*" = "Willkommen bei *Workout Transferer*";
 "Welcome decription" = "Mit dieser App können Workouts und ihre dazugehörigen Routen die in Health gespeichert sind ganz einfach von einem Gerät auf ein anderes Gerät übertragen werden. Beide Geräte müssten dabei diese App installiert haben.\nDie Übertragung von Workouts ist hilfreich, wenn z.B. nicht jeder bei einer Wanderung die Wanderung auch aufzeichnet, aber gerne alle die Trainingsdaten auf ihrem Gerät hätten.";
 "Access needed text" = "*Workout Transferer* benötigt Zugriff auf deine Health Daten, damit Workouts gelesen werden können. Damit Workouts importiert werden können, muss auch eine Schreibzugriff erteilt werden.";
 "Provide health access" = "Health Zugriff gestatten";
