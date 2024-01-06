@@ -383,6 +383,16 @@
         }
       }
     },
+    "Version: %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version: %@"
+          }
+        }
+      }
+    },
     "Walking" : {
       "comment" : "MARK: - Workout Activity",
       "localizations" : {

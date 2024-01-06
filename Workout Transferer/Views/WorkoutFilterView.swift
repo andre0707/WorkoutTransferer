@@ -72,6 +72,10 @@ struct WorkoutFilterView: View {
                     Text("Import")
                         .font(.headline)
                 })
+                
+                Section {
+                    Text("Version: \(Bundle.main.versionAndBuildNumber)")
+                }
             }
             .navigationTitle("Workout Filter")
             .navigationBarTitleDisplayMode(.inline)
