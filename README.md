@@ -41,6 +41,10 @@ Here is the main view:
 
 <img src="/img/01.png" width="400" alt="main view">
 
-The list view to select workouts from
+The list view to select workouts from which can be exported
 
 <img src="/img/02.png" width="400" alt="list view">
+
+Workouts to import are listed and can be selected
+
+<img src="/img/03.png" width="400" alt="import list view">
