@@ -37,6 +37,16 @@
         }
       }
     },
+    "Cross country skiing" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skilanglauf"
+          }
+        }
+      }
+    },
     "Cycling" : {
       "localizations" : {
         "de" : {
@@ -59,6 +69,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Only workouts during these days will be read"
+          }
+        }
+      }
+    },
+    "Downhill skiing" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skifahren"
           }
         }
       }
@@ -131,6 +151,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Filter"
+          }
+        }
+      }
+    },
+    "Golf" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Golf"
           }
         }
       }
@@ -211,16 +241,6 @@
         }
       }
     },
-    "Multiselect" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mehrfachauswahl"
-          }
-        }
-      }
-    },
     "No matching workouts" : {
       "localizations" : {
         "de" : {
@@ -231,12 +251,42 @@
         }
       }
     },
-    "Not selectable" : {
+    "Other" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nicht auswählbar"
+            "value" : "Andere"
+          }
+        }
+      }
+    },
+    "Outdoor rowing" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rudern"
+          }
+        }
+      }
+    },
+    "Outdoor skating" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skaten"
+          }
+        }
+      }
+    },
+    "Paddle sports" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paddeln"
           }
         }
       }
@@ -323,22 +373,12 @@
         }
       }
     },
-    "Selectable" : {
+    "Snowboarding" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Auswählbar"
-          }
-        }
-      }
-    },
-    "Selection" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Auswahl"
+            "value" : "Snowboarden"
           }
         }
       }

@@ -25,7 +25,15 @@ extension HKWorkoutActivityType: CustomStringConvertible {
         case .wheelchairWalkPace: return String(localized: "Wheelchair Walk Pace")
         case .wheelchairRunPace: return String(localized: "Wheelchair Run Pace")
         case .swimBikeRun: return String(localized: "Triathlon")
-        default: return String(localized: "Unknown", comment: "")
+        case .paddleSports: return String(localized: "Paddle sports")
+        case .crossCountrySkiing: return String(localized: "Cross country skiing")
+        case .rowing: return String(localized: "Outdoor rowing")
+        case .golf: return String(localized: "Golf")
+        case .downhillSkiing: return String(localized: "Downhill skiing")
+        case .snowboarding: return String(localized: "Snowboarding")
+        case .skatingSports: return String(localized: "Outdoor skating")
+        case .other: return String(localized: "Other")
+        default: return String(localized: "Unknown")
         }
     }
 }
@@ -53,6 +61,13 @@ extension HKWorkoutActivityType {
         case .wheelchairWalkPace: return "figure.roll"
         case .wheelchairRunPace: return "figure.roll.runningpace"
         case .swimBikeRun: return "medal"
+        case .paddleSports: return "oar.2.crossed"
+        case .crossCountrySkiing: return "figure.skiing.crosscountry"
+        case .rowing: return "figure.rower"
+        case .golf: return "figure.golf"
+        case .downhillSkiing: return "figure.skiing.downhill"
+        case .snowboarding: return "figure.snowboarding"
+        case .skatingSports: return "figure.skating"
         case .other: return "questionmark"
         default: return "questionmark"
         }

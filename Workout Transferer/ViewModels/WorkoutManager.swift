@@ -50,7 +50,15 @@ final class WorkoutManager: ObservableObject {
         .swimming,
         .wheelchairWalkPace,
         .wheelchairRunPace,
-        .swimBikeRun
+        .swimBikeRun,
+        .paddleSports,
+        .crossCountrySkiing,
+        .rowing,
+        .golf,
+        .downhillSkiing,
+        .snowboarding,
+        .skatingSports,
+        .other
     ]
     
     /// Indicator, if calories count should be included when exporting workouts
@@ -296,21 +304,48 @@ final class WorkoutManager: ObservableObject {
     private let healthStore = HKHealthStore()
     
     /// All the sample types this app needs write access to
-    private let writeSampleTypes: Set<HKSampleType> = [
-        HKSeriesType.workoutRoute(),
-        HKSeriesType.workoutType(),
-        HKSampleType.quantityType(forIdentifier: .distanceWalkingRunning)!,
-        HKSampleType.quantityType(forIdentifier: .distanceCycling)!,
-        HKSampleType.quantityType(forIdentifier: .distanceWheelchair)!
-    ]
+    private let writeSampleTypes: Set<HKSampleType> = {
+        var objectTypes: Set<HKSampleType> = [
+            HKSeriesType.workoutRoute(),
+            HKSeriesType.workoutType(),
+            HKQuantityType(.distanceWalkingRunning),
+            HKQuantityType(.distanceCycling),
+            HKQuantityType(.distanceWheelchair),
+            HKQuantityType(.distanceSwimming),
+            HKQuantityType(.distanceDownhillSnowSports)
+        ]
+        
+        if #available(iOS 18,*) {
+            objectTypes.insert(HKQuantityType(.distanceCrossCountrySkiing))
+            objectTypes.insert(HKQuantityType(.distanceRowing))
+            objectTypes.insert(HKQuantityType(.distancePaddleSports))
+            objectTypes.insert(HKQuantityType(.distanceSkatingSports))
+        }
+        
+        return objectTypes
+    }()
+    
     /// All the sample types this app wants read access to
-    private let readObjectTypes: Set<HKObjectType> = [
-        HKSeriesType.workoutRoute(),
-        HKSeriesType.workoutType(),
-        HKSampleType.quantityType(forIdentifier: .distanceWalkingRunning)!,
-        HKSampleType.quantityType(forIdentifier: .distanceCycling)!,
-        HKSampleType.quantityType(forIdentifier: .distanceWheelchair)!
-    ]
+    private let readObjectTypes: Set<HKObjectType> = {
+        var objectTypes: Set<HKObjectType> = [
+            HKSeriesType.workoutRoute(),
+            HKSeriesType.workoutType(),
+            HKQuantityType(.distanceWalkingRunning),
+            HKQuantityType(.distanceCycling),
+            HKQuantityType(.distanceWheelchair),
+            HKQuantityType(.distanceSwimming),
+            HKQuantityType(.distanceDownhillSnowSports)
+        ]
+        
+        if #available(iOS 18,*) {
+            objectTypes.insert(HKQuantityType(.distanceCrossCountrySkiing))
+            objectTypes.insert(HKQuantityType(.distanceRowing))
+            objectTypes.insert(HKQuantityType(.distancePaddleSports))
+            objectTypes.insert(HKQuantityType(.distanceSkatingSports))
+        }
+        
+        return objectTypes
+    }()
     
     /// Use this function to request permission to health data
     func requestPermissionToHealthData() async {
