@@ -8,12 +8,12 @@
 import HealthKit
 
 
-extension HKWorkoutActivityType: Identifiable {
+extension HKWorkoutActivityType {
     public var id: UInt { rawValue }
 }
 
 
-extension HKWorkoutActivityType: CustomStringConvertible {
+extension HKWorkoutActivityType: LocalizedStringConvertable {
     /// The description of the activity type
     public var description: String {
         switch self {
@@ -35,13 +35,6 @@ extension HKWorkoutActivityType: CustomStringConvertible {
         case .other: return String(localized: "Other")
         default: return String(localized: "Unknown")
         }
-    }
-}
-
-
-extension HKWorkoutActivityType: Comparable {
-    public static func < (lhs: HKWorkoutActivityType, rhs: HKWorkoutActivityType) -> Bool {
-        lhs.rawValue < rhs.rawValue
     }
 }
 

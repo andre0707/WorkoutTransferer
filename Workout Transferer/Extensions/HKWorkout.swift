@@ -7,7 +7,7 @@
 
 import HealthKit
 
-extension HKWorkout: Identifiable {
+extension HKWorkout {
     public var id: UUID { uuid }
 }
 

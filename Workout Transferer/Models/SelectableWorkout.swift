@@ -152,6 +152,7 @@ extension SelectableWorkout {
 // MARK: - Preview data
 
 extension SelectableWorkout {
+    @MainActor
     static let preview: [SelectableWorkout] = {
         let hkWorkout1 = HKWorkout(activityType: .hiking, start: Date.now.addingTimeInterval(-60*24), end: Date.now)
         let hkWorkout2 = HKWorkout(activityType: .running, start: Date.now.addingTimeInterval(-60*24*3), end: Date.now.addingTimeInterval(-60*24*2))

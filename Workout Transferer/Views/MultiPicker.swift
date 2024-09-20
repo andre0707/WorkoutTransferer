@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// A picker which allows the selection of multiple items
-struct MultiPicker<LabelView: View, SelectionLabelView: View, SelectionValue: Hashable & CustomStringConvertible>: View {
+struct MultiPicker<LabelView: View, SelectionLabelView: View, SelectionValue: Hashable & LocalizedStringConvertable>: View {
     /// The label of the picker itself
     let label: () -> LabelView
     /// The label for the selectable items which are presented in the picker
@@ -38,7 +38,7 @@ struct MultiPicker<LabelView: View, SelectionLabelView: View, SelectionValue: Ha
 
 
 /// The multi picker view which lists all the options
-struct MultiPickerView<LabelView: View, SelectionValue: Hashable & CustomStringConvertible>: View {
+struct MultiPickerView<LabelView: View, SelectionValue: Hashable & LocalizedStringConvertable>: View {
     
     /// The label for each option
     let selectionLabel: (SelectionValue) -> LabelView

@@ -452,6 +452,7 @@ final class WorkoutManager: ObservableObject {
 // MARK: - Preview data
 
 extension WorkoutManager {
+    @MainActor
     static let preview: WorkoutManager = {
         let manager = WorkoutManager()
         
